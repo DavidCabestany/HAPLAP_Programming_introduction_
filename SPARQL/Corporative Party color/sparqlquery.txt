@@ -1,0 +1,45 @@
+SELECT ?party ?partyLabel ?colorLabel
+WHERE 
+{
+  
+  ?party wdt:P31 wd:Q7278.
+  
+  
+  
+  ?party wdt:P465 ?srgb.
+  
+  ?color wdt:P31  wd:Q1075.
+  
+  ?color wdt:P465 ?srgb.
+  
+  
+  
+  FILTER(?party != wd:Q11284133).
+  FILTER(?party != wd:Q12019855).
+  FILTER(?party != wd:Q12020918).
+  FILTER(?party != wd:Q12038644).
+  FILTER(?party != wd:Q11284133).
+  FILTER(?party != wd:Q12019855).
+  FILTER(?party != wd:Q12020918).
+  FILTER(?party != wd:Q12038657).
+  FILTER(?party != wd:Q12038668).
+  FILTER(?party != wd:Q12042073).
+  FILTER(?party != wd:Q12056509).
+  FILTER(?party != wd:Q12056515).
+  FILTER(?party != wd:Q20104539).
+  FILTER(?party != wd:Q20619537).
+  FILTER(?party != wd:Q3366446).
+  FILTER(?party != wd:Q3394004).
+  FILTER(?party != wd:Q609548).
+  FILTER(?party != wd:Q62011148).
+  FILTER(?party != wd:Q89909916).
+  FILTER(?party != wd:Q12901869).
+  FILTER(?party != wd:Q12901869).
+  FILTER(?party  != wd:Q11177426).
+  FILTER(?srgb  != "008000").
+  FILTER(?srgb  != "000000").
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en".}
+  
+  }
+ORDER BY ?partyLabel
